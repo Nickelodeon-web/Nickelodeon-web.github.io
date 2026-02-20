@@ -74,4 +74,5 @@ body {
     .bento-grid { display: flex; flex-direction: column; gap: 1rem; height: auto; }
     .bento-item { padding: 1.5rem; }
     h1 { font-size: 3rem !important; }
+
 }
