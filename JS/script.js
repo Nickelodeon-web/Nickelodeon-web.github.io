@@ -174,4 +174,41 @@ function openCV() {
     // Remplace 'cv.pdf' par le nom exact de ton fichier si différent
     window.open('CV.pdf', '_blank'); 
 }
+// --- GESTION DU FORMULAIRE AVEC MESSAGE INTÉGRÉ ---
+const contactForm = document.querySelector('form');
+const successMsg = document.getElementById('contact-success');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const data = new FormData(this);
+        const submitBtn = this.querySelector('button[type="submit"]');
+
+        submitBtn.disabled = true;
+        submitBtn.innerText = "ENVOI...";
+
+        fetch(this.action, {
+            method: 'POST',
+            body: data,
+            headers: { 'Accept': 'application/json' }
+        }).then(response => {
+            if (response.ok) {
+                // 1. On affiche le message de succès en retirant la classe 'hidden'
+                successMsg.classList.remove('hidden');
+                
+                // 2. On réinitialise le formulaire
+                this.reset();
+
+                // 3. Optionnel : On peut masquer le message après quelques secondes
+                setTimeout(() => {
+                    successMsg.classList.add('hidden');
+                }, 5000);
+            }
+        }).finally(() => {
+            submitBtn.disabled = false;
+            submitBtn.innerText = "Envoyer le message";
+        });
+    });
+}
 
