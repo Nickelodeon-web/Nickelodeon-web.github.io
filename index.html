@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Développeur | BTS SIO SLAM</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="fixed top-0 w-full z-50 glass-nav px-6 md:px-12 py-4 flex justify-between items-center">
+        <div class="text-xl font-extrabold tracking-tighter cursor-pointer z-50" onclick="goToSection(0)">NOM<span class="text-blue-500">.</span>DEV</div>
+        
+        <div class="hidden lg:flex gap-8 mono text-[10px] uppercase tracking-widest text-zinc-500">
+            <button onclick="goToSection(1)" class="hover:text-blue-500 transition-colors">Architecture</button>
+            <button onclick="goToSection(2)" class="hover:text-blue-500 transition-colors">Projets</button>
+            <button onclick="goToSection(3)" class="hover:text-blue-500 transition-colors">Expérience</button>
+            <button onclick="goToSection(4)" class="hover:text-blue-500 transition-colors">Veille</button>
+        </div>
+
+        <div class="flex items-center gap-4 z-50">
+            <button onclick="openContact()" class="px-5 py-2 bg-white text-black text-xs font-bold rounded-full hover:bg-blue-500 hover:text-white transition-all uppercase">Contact</button>
+        </div>
+    </nav>
+
+    <main id="main-wrapper" class="horizontal-wrapper">
+
+        <section id="hero" class="panel bg-black relative flex flex-col justify-center">
+            <div class="max-w-5xl mt-24 md:mt-0 w-full">
+                <p class="mono text-blue-500 mb-4 uppercase tracking-widest text-[10px] md:text-xs">Initialisation du système...</p>
+                <h1 class="text-5xl md:text-8xl font-black leading-tight tracking-tighter mb-6">DÉVELOPPEUR <br> <span class="outline-text">APPLICATIF</span></h1>
+                <p class="text-base md:text-xl text-zinc-400 max-w-xl mb-10 leading-relaxed">Étudiant en BTS SIO SLAM (2ème année). <br>Expertise en architecture logicielle et résolution de problèmes métiers.</p>
+                
+                <div class="flex flex-col md:flex-row items-center gap-6 w-full md:w-auto">
+                    <button onclick="openCV()" class="w-full md:w-auto px-8 py-4 bg-white text-black rounded-xl font-bold hover:bg-blue-500 hover:text-white transition-all flex items-center justify-center gap-2">
+                        <span>CV</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+                    </button>
+                    <div class="flex gap-6 items-center w-full md:w-auto justify-center md:justify-start md:pl-6 md:border-l border-zinc-800">
+                        
+                        <a href="https://www.linkedin.com/in/yanis-santaki/" target="_blank" class="text-zinc-500 hover:text-blue-500 transition-colors flex items-center gap-2 text-sm font-bold group">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                            LINKEDIN
+                        </a>
+
+                        <a href="https://github.com/Nickelodeon-web" target="_blank" class="text-zinc-500 hover:text-white transition-colors flex items-center gap-2 text-sm font-bold group">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            GITHUB
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="panel bg-zinc-950">
+            <h2 class="text-3xl md:text-4xl font-black mb-8 md:mb-12 uppercase tracking-tight">Architecture Technique</h2>
+            
+            <div class="bento-grid">
+                <div class="bento-item col-span-2 row-span-1 border-zinc-800 flex flex-col justify-center">
+                    <h3 class="mono text-blue-500 text-[10px] uppercase mb-2 md:mb-4 tracking-widest">Profil</h3>
+                    <p class="text-sm md:text-xl text-zinc-300 leading-relaxed font-medium">Étudiant en 2ème année BTS SIO SLAM. Sérieux et passionné, je conçois des solutions logicielles performantes et adaptées aux besoins des entreprises.</p>
+                </div>
+                <div class="bento-item col-span-1 row-span-1 flex flex-col items-center justify-center text-center border-blue-500/20">
+                    <div class="text-4xl md:text-6xl font-black text-blue-500 mb-2">2nd</div>
+                    <div class="mono text-[8px] md:text-[9px] uppercase text-zinc-500 tracking-[0.2em] font-bold">Année BTS SIO SLAM</div>
+                </div>
+                <div class="bento-item col-span-1 row-span-2 bg-blue-600 border-none relative overflow-hidden flex flex-col justify-center">
+                    <div class="relative z-10 h-full flex flex-col justify-center">
+                        <h3 class="text-2xl md:text-4xl font-black text-white mb-6 md:mb-8 tracking-tight text-left">Stacks</h3>
+                        <div class="flex flex-col gap-3 md:gap-4">
+                            <div class="stack-row group/java"><svg class="stack-icon w-6 h-6 md:w-8 md:h-8" viewBox="0 0 24 24" fill="currentColor"><path d="M12.9 14.3c-1.6-.2-3.3.3-4.3 1.4-.2.2-.4.5-.6.8-1 .4-2.1.2-3-.3-.9-.6-1.5-1.5-1.7-2.6 0-.2.2-.4.4-.3 1.1.3 2.1 1.1 2.8 2.2 0 0 .1.1.1 0 .2-1.3 1.3-2.3 2.6-2.3.8 0 1.6.4 2.1 1 .5-1.3-.1-2.8-1.4-3.3-1.3-.5-2.8.1-3.3 1.4 0 .1 0 .2-.1.3-.4-1.2-1.6-1.9-2.8-1.8-1.2.1-2.2 1-2.4 2.3-.6-1-1.8-1.6-2.9-1.3-1.4.3-2.2 1.7-1.9 3.1.3 1.3 1.6 2.1 2.9 1.8.7-.2 1.3-.7 1.7-1.4 0 0 .1-.1.1 0 0 .1 0 .2.1.3.1.2.3.3.5.3.2 0 .4-.2.4-.4zm-3.2-3.2c.4-.7 1.2-1.1 2-1.1 1.2 0 2.2.9 2.4 2.1.2-1.3 1.3-2.3 2.6-2.3.8 0 1.6.4 2.1 1 .5-1.3-.1-2.8-1.4-3.3-1.3-.5-2.8.1-3.3 1.4 0 .1 0 .2-.1.3-.4-1.2-1.6-1.9-2.8-1.8-1.2.1-2.2 1-2.4 2.3-.6-1-1.8-1.6-2.9-1.3-1.4.3-2.2 1.7-1.9 3.1.3 1.3 1.6 2.1 2.9 1.8.7-.2 1.3-.7 1.7-1.4 0 0 .1-.1.1 0 0 .1 0 .2.1.3.1.2.3.3.5.3.2 0 .4-.2.4-.4zm-2.4 9.1c.3 1.3 1.5 2.2 2.8 2.2h4.8c1.3 0 2.5-.9 2.8-2.2.3-1.3-.6-2.7-1.9-3-1.3-.3-2.7.6-3 1.9-.1.3-.1.6-.1.8H9.3c0-1.2-1-2.2-2.2-2.2-.6 0-1.2.2-1.6.6-.7.7-1.1 1.7-1 2.7.1 1.3 1.2 2.3 2.6 2.3.1 0 .1 0 .2-.1 0 0 0 0 0-1.1 0-1.1.9-2 2-2h.1c-.2.7-.1 1.5.3 2.1.6 1.1 1.8 1.6 3 1.3 1.2-.3 1.9-1.5 1.6-2.7-.2-.9-.9-1.6-1.8-1.8-.1 0-.1 0-.1.1 0 .1.1.2.1.3.2 1.1-.5 2.1-1.6 2.4-1.1.2-2.1-.5-2.4-1.6-.1-.3-.1-.7 0-1 0 0 0-.1-.1-.1h-1.3c0 .1 0 .1.1.2.4 1.5 2 2.4 3.5 2 1.5-.4 2.4-2 2-3.5-.3-1.1-1.3-1.9-2.4-1.9H9.3c-1.1 0-2.1.8-2.3 1.9-.3 1.5.7 2.9 2.2 3.2.1 0 .1 0 .2.1-.1 0-.2 0-.3-.1z"/></svg><span class="text-sm md:text-lg font-bold text-white tracking-tight">Java (POO)</span></div>
+                            <div class="stack-row group/csharp"><svg class="stack-icon w-6 h-6 md:w-8 md:h-8" viewBox="0 0 24 24" fill="currentColor"><path d="M11.5 6.5v-2H10v2H8v1.5h2v4H8v1.5h2v2h1.5v-2h4v2H17v-2h2v-1.5h-2v-4h2V6.5h-2v-2h-1.5v2h-4zm4 5.5v-4h-4v4h4z"/></svg><span class="text-sm md:text-lg font-bold text-white tracking-tight">C# / .NET</span></div>
+                            <div class="stack-row group/php"><svg class="stack-icon w-6 h-6 md:w-8 md:h-8" viewBox="0 0 24 24" fill="currentColor"><path d="M12.87 14.153c-.31-1.353-.787-2.618-2.65-2.618H9.35v4.295h.41c2.25 0 2.802-1.326 2.802-1.326z"/></svg><span class="text-sm md:text-lg font-bold text-white tracking-tight">PHP 8 (MVC)</span></div>
+                            <div class="stack-row group/sql"><svg class="stack-icon w-6 h-6 md:w-8 md:h-8" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 4.13 2 6.75v10.5c0 2.62 4.48 4.75 10 4.75s10-2.13 10-4.75V6.75C22 4.13 17.52 2 12 2z"/></svg><span class="text-sm md:text-lg font-bold text-white tracking-tight">SQL / MySQL</span></div>
+                            <div class="stack-row group/react"><svg class="stack-icon w-6 h-6 md:w-8 md:h-8" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2.19c2.03 0 3.926.697 5.567 1.865z"/></svg><span class="text-sm md:text-lg font-bold text-white tracking-tight">React JS</span></div>
+                        </div>
+                    </div>
+                    <div class="absolute -right-16 -bottom-16 w-64 h-64 bg-white/10 rounded-full blur-[80px]"></div>
+                </div>
+                <div class="bento-item col-span-3 row-span-1 border-zinc-800 flex flex-col justify-center">
+                    <h3 class="mono text-zinc-500 text-[10px] uppercase mb-4 md:mb-8 tracking-widest">Méthodologies et Outils</h3>
+                    <div class="flex flex-wrap gap-2 md:gap-4">
+                        <div class="tech-tag group"><svg class="w-4 h-4 md:w-5 md:h-5 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg><span class="text-[10px] md:text-sm">UML / Merise</span></div>
+                        <div class="tech-tag group"><svg class="w-4 h-4 md:w-5 md:h-5 text-[#F05032]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg><span class="text-[10px] md:text-sm">Git / GitHub</span></div>
+                        <div class="tech-tag group"><svg class="w-4 h-4 md:w-5 md:h-5 text-[#61BD4F]" viewBox="0 0 24 24" fill="currentColor"><path d="M12.825 16.126c-.45.09-1.26.162-1.26.162l-.054-.162c0 0-.27.054-.594.054a3.812 3.812 0 0 1-.9-.09 3.09 3.09 0 0 0 .54-1.224c-.234.018-.468.018-.684.018-1.476 0-2.43-.288-2.43-.288l-.216.9a8.673 8.673 0 0 0 3.78 1.008c.702 0 1.332-.072 1.818-.378zm-6.048-2.952c0 .018 1.764.216 4.77.216 1.746 0 3.204-.072 4.104-.18l.198-.81s-1.044.18-4.284.18c-3.132 0-4.554-.18-4.572-.18l-.216.774zm3.06-5.832c-.54 0-1.116.27-1.62.828l.81.63s.27-.36.756-.36c.648 0 .864.504.864.846 0 .018 0 .036-.018.054l2.844.252s-.126-2.25-3.636-2.25zm5.724 3.726c-1.35.108-3.924.162-6.732.162-1.692 0-2.88-.036-3.33-.054l-.234.828s1.602.198 3.528.198c4.266 0 6.66-.18 6.948-.198l-.18-.936zM12.44 9.18l-.9 1.08s.162.234.612.234c.324 0 .558-.162.558-.45 0-.612-.27-.864-.27-.864z"/></svg><span class="text-[10px] md:text-sm">Agile (Scrum)</span></div>
+                        <div class="tech-tag group"><svg class="w-4 h-4 md:w-5 md:h-5 text-[#2496ED]" viewBox="0 0 24 24" fill="currentColor"><path d="M13.983 11.078h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.185v1.888c0 .102.083.185.185.185m-2.954-5.43h2.118a.186.186 0 00.186-.186V3.574a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m0 2.716h2.118a.187.187 0 00.186-.186V6.29a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.887c0 .102.082.185.185.185m-2.93 0h2.12a.186.186 0 00.184-.186V6.29a.185.185 0 00-.185-.185H8.1a.185.185 0 00-.185.185v1.887c0 .102.083.185.185.185m-2.964 0h2.119a.186.186 0 00.185-.186V6.29a.185.185 0 00-.185-.185H5.136a.186.186 0 00-.186.185v1.887c0 .102.084.185.186.185m5.892 2.715h2.118a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.186.186 0 00-.184.185v1.888c0 .102.083.185.185.185m-2.964 0h2.119a.185.185 0 00.185-.185V9.006a.185.185 0 00-.185-.186H.185a.186.186 0 00-.185.185v1.888c0 .102.083.185.185.185M24 16.225l-2.928-7.992h-4.294a.557.557 0 00-.474.266 10.66 10.66 0 00-1.898 3.018 20.35 20.35 0 00-.638 1.956.126.126 0 01-.115.088H.242c-.22 0-.276.284-.083.414l5.378 3.633a.123.123 0 01.045.14 11.026 11.026 0 00-.198 1.956c0 4.192 4.904 4.542 9.475 3.96 4.382-.556 6.848-4.204 9.002-7.14a.557.557 0 00.138-.299z"/></svg><span class="text-[10px] md:text-sm">Docker</span></div>
+                        <div class="tech-tag group"><svg class="w-4 h-4 md:w-5 md:h-5 text-[#F24E1E]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a4 4 0 0 0-4 4v4h4a4 4 0 0 0 4-4 4 4 0 0 0-4-4zm-4 8v4a4 4 0 0 0 4 4h.018A3.99 3.99 0 0 0 16 14v-4h-8zm0 8v2a4 4 0 1 0 8 0v-2h-8zM12 6a2 2 0 1 1 0 4 2 2 0 0 1 0-4zm-2 12a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/></svg><span class="text-[10px] md:text-sm">Figma</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="panel bg-black">
+            <h2 class="text-4xl font-black mb-12 flex items-center gap-4">Études de Cas <span class="h-1 w-20 bg-blue-500 rounded-full"></span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 h-full">
+                <article id="project-display-area" class="bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden flex flex-col relative transition-all duration-300">
+                    <div class="h-40 md:h-44 shrink-0 bg-zinc-800 relative overflow-hidden">
+                        <img id="project-display-img" src="" alt="Projet" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-2 gap-4">
+                                <h3 id="project-display-title" class="text-2xl md:text-3xl font-bold text-white leading-tight"></h3>
+                                <span id="project-display-badge" class="mono text-[10px] bg-blue-900/30 text-blue-400 border border-blue-500/30 px-3 py-1 rounded-full whitespace-nowrap"></span>
+                            </div>
+                            <p id="project-display-desc" class="text-zinc-400 text-base md:text-lg leading-relaxed mb-4 line-clamp-3"></p>
+                        </div>
+                        <div class="flex gap-4 mt-2">
+                            <button class="px-5 py-2 bg-blue-600 rounded-xl text-xs md:text-sm font-bold text-white hover:bg-blue-500 transition-all flex items-center gap-2">
+                                DÉTAILS <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+                            </button>
+                            <button class="px-5 py-2 border border-zinc-700 rounded-xl text-xs md:text-sm font-bold text-zinc-300 hover:bg-zinc-800 transition-all flex items-center gap-2">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                                GITHUB
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                <div class="flex flex-col gap-4" id="project-list-container"></div>
+            </div>
+        </section>
+
+        <section id="experience" class="panel bg-zinc-950 flex flex-col justify-center">
+            <h2 class="text-4xl font-black mb-8 uppercase tracking-tight flex items-center gap-4">Expérience <span class="w-12 h-1 bg-blue-600 rounded-full"></span></h2>
+            <div class="flex flex-col md:flex-row gap-12 h-[60vh] w-full max-w-6xl mx-auto relative">
+                <div class="w-full md:w-1/3 flex flex-col justify-between border-l-2 border-zinc-800 pl-8 py-4 relative">
+                    <div id="timeline-progress" class="absolute left-[-2px] top-0 w-[2px] bg-blue-600 transition-all duration-500"></div>
+                    <div id="timeline-list" class="flex flex-col h-full justify-between"></div>
+                </div>
+                <div class="w-full md:w-2/3 bg-zinc-900 border border-zinc-800 rounded-3xl p-10 relative overflow-hidden flex flex-col justify-center shadow-2xl">
+                    <div class="absolute top-0 right-0 p-12 opacity-5 pointer-events-none">
+                        <svg class="w-64 h-64 text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>
+                    </div>
+                    <div class="absolute top-10 right-10 w-2 h-2 bg-green-500 rounded-full animate-pulse shadow-[0_0_10px_#22c55e]"></div>
+                    <div id="exp-content" class="relative z-10 transition-opacity duration-300"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="veille" class="panel bg-zinc-950">
+            <h2 class="text-4xl font-black mb-12 uppercase tracking-tight flex items-center gap-4">Veille Technologique <span class="w-12 h-1 bg-blue-600 rounded-full"></span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 h-full pb-12">
+                <article class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 flex flex-col justify-between hover:border-blue-500 transition-all group">
+                    <div>
+                        <div class="w-12 h-12 bg-blue-600/20 rounded-xl flex items-center justify-center mb-6 text-blue-500 group-hover:bg-blue-600 group-hover:text-white transition-all"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg></div>
+                        <h3 class="text-2xl font-bold mb-4">Le Cloud Computing</h3>
+                        <p id="veille-desc-0" class="text-zinc-400 text-sm leading-relaxed"></p>
+                    </div>
+                    <div class="flex items-center gap-2 text-xs font-bold text-blue-500 mt-8 uppercase tracking-widest">ARCHITECTURE <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg></div>
+                </article>
+                <article class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 flex flex-col justify-between hover:border-green-500 transition-all group">
+                    <div>
+                        <div class="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center mb-6 text-green-500 group-hover:bg-green-500 group-hover:text-white transition-all"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg></div>
+                        <h3 class="text-2xl font-bold mb-4">Cloud pour le Dev</h3>
+                        <p id="veille-desc-1" class="text-zinc-400 text-sm leading-relaxed"></p>
+                    </div>
+                    <div class="flex items-center gap-2 text-xs font-bold text-green-500 mt-8 uppercase tracking-widest">DEVOPS <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg></div>
+                </article>
+                <article class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 flex flex-col justify-between hover:border-purple-500 transition-all group">
+                    <div>
+                        <div class="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mb-6 text-purple-500 group-hover:bg-purple-500 group-hover:text-white transition-all"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M6 5c7.18 0 13 5.82 13 13M6 11a7 7 0 017 7m-6 0a1 1 0 11-2 0 1 1 0 012 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg></div>
+                        <h3 class="text-2xl font-bold mb-4">Outils de Veille</h3>
+                        <p id="veille-desc-2" class="text-zinc-400 text-sm leading-relaxed"></p>
+                    </div>
+                    <div class="flex items-center gap-2 text-xs font-bold text-purple-500 mt-8 uppercase tracking-widest">SOURCES <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg></div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <div id="contact-page" class="fixed inset-0 z-[100] bg-black/95 backdrop-blur-xl translate-y-full transition-transform duration-500 p-8 flex flex-col items-center justify-center overflow-y-auto">
+        <button onclick="closeContact()" class="absolute top-8 right-8 text-zinc-500 hover:text-white p-4 group">
+            <div class="relative w-10 h-10 flex items-center justify-center bg-zinc-900 rounded-full border border-zinc-800 group-hover:border-white transition-colors">
+                <svg class="w-5 h-5 transition-transform group-hover:rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+            </div>
+        </button>
+
+        <div class="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+            
+            <div class="space-y-10">
+                <div>
+                    <p class="mono text-blue-500 text-xs tracking-widest mb-4 uppercase">Contact</p>
+                    <h2 class="text-5xl md:text-7xl font-black text-white leading-tight mb-6">
+                        On discute <br>
+                        <span class="text-blue-500">ensemble ?</span>
+                    </h2>
+                    <p class="text-zinc-400 text-lg leading-relaxed max-w-md">
+                        Je suis actuellement à la recherche d'un stage ou d'une alternance. N'hésitez pas à me contacter pour échanger sur vos projets.
+                    </p>
+                </div>
+
+                <div class="flex flex-col gap-4">
+                    <a href="https://www.linkedin.com/in/yanis-santaki/" target="_blank" class="flex items-center gap-4 p-4 bg-zinc-900 border border-zinc-800 rounded-2xl hover:border-blue-500 transition-all group w-full max-w-sm">
+                        <div class="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-500 group-hover:bg-blue-500 group-hover:text-white transition-all">
+                            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        </div>
+                        <div>
+                            <div class="text-[10px] font-bold text-zinc-500 uppercase tracking-widest mb-1">LinkedIn</div>
+                            <div class="text-white font-bold text-lg group-hover:text-blue-500 transition-colors">Mon profil</div>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/Nickelodeon-web" target="_blank" class="flex items-center gap-4 p-4 bg-zinc-900 border border-zinc-800 rounded-2xl hover:border-white transition-all group w-full max-w-sm">
+                        <div class="w-12 h-12 bg-zinc-800 rounded-lg flex items-center justify-center text-white group-hover:bg-white group-hover:text-black transition-all">
+                            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        </div>
+                        <div>
+                            <div class="text-[10px] font-bold text-zinc-500 uppercase tracking-widest mb-1">GitHub</div>
+                            <div class="text-white font-bold text-lg group-hover:text-zinc-300 transition-colors">Mes projets</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <form class="bg-zinc-900 border border-zinc-800 p-8 md:p-10 rounded-[2rem] space-y-6" onsubmit="event.preventDefault(); alert('Message envoyé !'); closeContact();">
+                
+                <div class="space-y-2">
+                    <label class="text-[10px] font-bold text-zinc-500 uppercase tracking-widest">Votre Nom</label>
+                    <input type="text" class="w-full bg-black border border-zinc-800 rounded-xl p-4 text-white focus:border-blue-500 focus:outline-none transition-colors placeholder-zinc-700" placeholder="Ex: Jean Dupont">
+                </div>
+
+                <div class="space-y-2">
+                    <label class="text-[10px] font-bold text-zinc-500 uppercase tracking-widest">Votre Email</label>
+                    <input type="email" class="w-full bg-black border border-zinc-800 rounded-xl p-4 text-white focus:border-blue-500 focus:outline-none transition-colors placeholder-zinc-700" placeholder="Ex: jean@exemple.com">
+                </div>
+
+                <div class="space-y-2">
+                    <label class="text-[10px] font-bold text-zinc-500 uppercase tracking-widest">Message</label>
+                    <textarea rows="4" class="w-full bg-black border border-zinc-800 rounded-xl p-4 text-white focus:border-blue-500 focus:outline-none transition-colors resize-none placeholder-zinc-700" placeholder="Comment puis-je vous aider ?"></textarea>
+                </div>
+
+                <button type="submit" class="w-full py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-500 transition-all flex items-center justify-center gap-2 uppercase tracking-wide text-sm">
+                    Envoyer le message
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+                </button>
+            </form>
+
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
