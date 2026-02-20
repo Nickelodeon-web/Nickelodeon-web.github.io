@@ -172,5 +172,6 @@ function closeContact() { document.getElementById("contact-page").classList.add(
 // --- MODIFICATION ICI : Lien vers le fichier CV local ---
 function openCV() { 
     // Remplace 'cv.pdf' par le nom exact de ton fichier si différent
-    window.open('cv.pdf', '_blank'); 
+    window.open('CV.pdf', '_blank'); 
 }
+
