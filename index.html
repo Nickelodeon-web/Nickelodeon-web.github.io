@@ -11,7 +11,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -51,12 +51,10 @@
                     </button>
                     
                     <div class="flex gap-6 2xl:gap-8 items-center w-full md:w-auto justify-center md:justify-start md:pl-6 2xl:pl-10 md:border-l border-zinc-800">
-                        
                         <a href="https://www.linkedin.com/in/yanis-santaki/" target="_blank" class="text-zinc-500 hover:text-blue-500 transition-colors flex items-center gap-2 2xl:gap-3 text-sm 2xl:text-lg font-bold group">
                             <svg class="w-5 h-5 2xl:w-7 2xl:h-7 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                             LINKEDIN
                         </a>
-
                         <a href="https://github.com/Nickelodeon-web" target="_blank" class="text-zinc-500 hover:text-white transition-colors flex items-center gap-2 2xl:gap-3 text-sm 2xl:text-lg font-bold group">
                             <svg class="w-5 h-5 2xl:w-7 2xl:h-7 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                             GITHUB
@@ -76,14 +74,19 @@
                     <p class="text-sm md:text-xl 2xl:text-2xl text-zinc-300 leading-relaxed 2xl:leading-loose font-medium">Étudiant en 2ème année BTS SIO SLAM. Sérieux et passionné, je conçois des solutions logicielles performantes et adaptées aux besoins des entreprises.</p>
                 </div>
                 
-                <div class="bento-item col-span-1 row-span-1 flex flex-col items-center justify-center text-center border-blue-500/20">
-                    <div class="text-4xl md:text-6xl 2xl:text-8xl font-black text-blue-500 mb-2 2xl:mb-4">2nd</div>
-                    <div class="mono text-[8px] md:text-[9px] 2xl:text-xs uppercase text-zinc-500 tracking-[0.2em] font-bold">Année BTS SIO SLAM</div>
+                <div onclick="window.open('Tableau_de_synthese_E5_SANTAKI_Yanis.xlsx', '_blank')" class="bento-item col-span-1 row-span-1 flex flex-col items-center justify-center text-center border-blue-500/20 cursor-pointer hover:border-blue-500 transition-all group relative" title="Voir le Tableau de synthèse E5">
+                    
+                    <div class="absolute top-4 right-4 text-zinc-700 group-hover:text-blue-500 transition-colors">
+                        <svg class="w-5 h-5 2xl:w-7 2xl:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                    </div>
+
+                    <div class="text-4xl md:text-6xl 2xl:text-8xl font-black text-blue-500 mb-2 2xl:mb-4 group-hover:scale-105 transition-transform duration-300">2nd</div>
+                    <div class="mono text-[8px] md:text-[9px] 2xl:text-xs uppercase text-zinc-500 tracking-[0.2em] font-bold group-hover:text-zinc-300 transition-colors">Année BTS SIO SLAM</div>
                 </div>
                 
                 <div class="bento-item col-span-1 row-span-2 border-zinc-800 relative overflow-hidden flex flex-col justify-center">
                     <div class="relative z-10 h-full flex flex-col justify-center">
-                        <h3 class="text-2xl md:text-4xl 2xl:text-5xl font-black text-white mb-6 md:mb-8 2xl:mb-12 tracking-tight text-left">Langage</h3>
+                        <h3 class="text-2xl md:text-4xl 2xl:text-5xl font-black text-white mb-6 md:mb-8 2xl:mb-12 tracking-tight text-left">Stacks</h3>
                         <div class="flex flex-col gap-3 md:gap-4 2xl:gap-8">
                             
                             <div class="stack-row group/java">
@@ -122,7 +125,7 @@
                         <div class="tech-tag group 2xl:px-6 2xl:py-4"><svg class="w-4 h-4 md:w-5 md:h-5 2xl:w-8 2xl:h-8 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg><span class="text-[10px] md:text-sm 2xl:text-xl">UML / Merise</span></div>
                         <div class="tech-tag group 2xl:px-6 2xl:py-4"><svg class="w-4 h-4 md:w-5 md:h-5 2xl:w-8 2xl:h-8 text-[#F05032]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg><span class="text-[10px] md:text-sm 2xl:text-xl">Git / GitHub</span></div>
                         <div class="tech-tag group 2xl:px-6 2xl:py-4"><svg class="w-4 h-4 md:w-5 md:h-5 2xl:w-8 2xl:h-8 text-[#61BD4F]" viewBox="0 0 24 24" fill="currentColor"><path d="M12.825 16.126c-.45.09-1.26.162-1.26.162l-.054-.162c0 0-.27.054-.594.054a3.812 3.812 0 0 1-.9-.09 3.09 3.09 0 0 0 .54-1.224c-.234.018-.468.018-.684.018-1.476 0-2.43-.288-2.43-.288l-.216.9a8.673 8.673 0 0 0 3.78 1.008c.702 0 1.332-.072 1.818-.378zm-6.048-2.952c0 .018 1.764.216 4.77.216 1.746 0 3.204-.072 4.104-.18l.198-.81s-1.044.18-4.284.18c-3.132 0-4.554-.18-4.572-.18l-.216.774zm3.06-5.832c-.54 0-1.116.27-1.62.828l.81.63s.27-.36.756-.36c.648 0 .864.504.864.846 0 .018 0 .036-.018.054l2.844.252s-.126-2.25-3.636-2.25zm5.724 3.726c-1.35.108-3.924.162-6.732.162-1.692 0-2.88-.036-3.33-.054l-.234.828s1.602.198 3.528.198c4.266 0 6.66-.18 6.948-.198l-.18-.936zM12.44 9.18l-.9 1.08s.162.234.612.234c.324 0 .558-.162.558-.45 0-.612-.27-.864-.27-.864z"/></svg><span class="text-[10px] md:text-sm 2xl:text-xl">Agile (Scrum)</span></div>
-                        <div class="tech-tag group 2xl:px-6 2xl:py-4"><svg class="w-4 h-4 md:w-5 md:h-5 2xl:w-8 2xl:h-8 text-[#2496ED]" viewBox="0 0 24 24" fill="currentColor"><path d="M13.983 11.078h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.185v1.888c0 .102.083.185.185.185m-2.954-5.43h2.118a.186.186 0 00.186-.185V3.574a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m0 2.716h2.118a.187.187 0 00.186-.186V6.29a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.887c0 .102.082.185.185.185m-2.93 0h2.12a.186.186 0 00.184-.186V6.29a.185.185 0 00-.185-.185H8.1a.185.185 0 00-.185.185v1.887c0 .102.083.185.185.185m-2.964 0h2.119a.186.186 0 00.185-.186V6.29a.185.185 0 00-.185-.185H5.136a.186.186 0 00-.186.185v1.887c0 .102.084.185.186.185m5.892 2.715h2.118a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.186.186 0 00-.184.185v1.888c0 .102.083.185.185.185m-2.964 0h2.119a.185.185 0 00.185-.185V9.006a.185.185 0 00-.185-.186H.185a.186.186 0 00-.185.185v1.888c0 .102.083.185.185.185M24 16.225l-2.928-7.992h-4.294a.557.557 0 00-.474.266 10.66 10.66 0 00-1.898 3.018 20.35 20.35 0 00-.638 1.956.126.126 0 01-.115.088H.242c-.22 0-.276.284-.083.414l5.378 3.633a.123.123 0 01.045.14 11.026 11.026 0 00-.198 1.956c0 4.192 4.904 4.542 9.475 3.96 4.382-.556 6.848-4.204 9.002-7.14a.557.557 0 00.138-.299z"/></svg><span class="text-[10px] md:text-sm 2xl:text-xl">Docker</span></div>
+                        <div class="tech-tag group 2xl:px-6 2xl:py-4"><svg class="w-4 h-4 md:w-5 md:h-5 2xl:w-8 2xl:h-8 text-[#2496ED]" viewBox="0 0 24 24" fill="currentColor"><path d="M13.983 11.078h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.185v1.888c0 .102.083.185.185.185m-2.954-5.43h2.118a.186.186 0 00.186-.186V3.574a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m0 2.716h2.118a.187.187 0 00.186-.186V6.29a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.887c0 .102.082.185.185.185m-2.93 0h2.12a.186.186 0 00.184-.186V6.29a.185.185 0 00-.185-.185H8.1a.185.185 0 00-.185.185v1.887c0 .102.083.185.185.185m-2.964 0h2.119a.186.186 0 00.185-.186V6.29a.185.185 0 00-.185-.185H5.136a.186.186 0 00-.186.185v1.887c0 .102.084.185.186.185m5.892 2.715h2.118a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.186.186 0 00-.184.185v1.888c0 .102.083.185.185.185m-2.964 0h2.119a.185.185 0 00.185-.185V9.006a.185.185 0 00-.185-.186H.185a.186.186 0 00-.185.185v1.888c0 .102.083.185.185.185M24 16.225l-2.928-7.992h-4.294a.557.557 0 00-.474.266 10.66 10.66 0 00-1.898 3.018 20.35 20.35 0 00-.638 1.956.126.126 0 01-.115.088H.242c-.22 0-.276.284-.083.414l5.378 3.633a.123.123 0 01.045.14 11.026 11.026 0 00-.198 1.956c0 4.192 4.904 4.542 9.475 3.96 4.382-.556 6.848-4.204 9.002-7.14a.557.557 0 00.138-.299z"/></svg><span class="text-[10px] md:text-sm 2xl:text-xl">Docker</span></div>
                         <div class="tech-tag group 2xl:px-6 2xl:py-4"><svg class="w-4 h-4 md:w-5 md:h-5 2xl:w-8 2xl:h-8 text-[#F24E1E]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a4 4 0 0 0-4 4v4h4a4 4 0 0 0 4-4 4 4 0 0 0-4-4zm-4 8v4a4 4 0 0 0 4 4h.018A3.99 3.99 0 0 0 16 14v-4h-8zm0 8v2a4 4 0 1 0 8 0v-2h-8zM12 6a2 2 0 1 1 0 4 2 2 0 0 1 0-4zm-2 12a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/></svg><span class="text-[10px] md:text-sm 2xl:text-xl">Figma</span></div>
                     </div>
                 </div>
@@ -321,9 +324,6 @@
         </div>
     </div>
 
-    <script src="JS/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
-
-
-
