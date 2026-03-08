@@ -1,6 +1,6 @@
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
-// --- DONNÉES ---
+// --- DONNÉES PROJETS ---
 const projectsData = [
     {
         title: "Appli-Rapport de visite",
@@ -28,6 +28,7 @@ const projectsData = [
     }
 ];
 
+// --- DONNÉES EXPERIENCES ---
 const experiences = [
     { id: 0, date: "MAI 2025 - JUIN 2025", role: "Stagiaire Développement no-code", company: "Equans (Courbevoie)", desc: "Développement d'applications métiers rapides pour optimiser les processus internes. Automatisation de flux de données.", tags: ["Power Apps", "Power Automate", "SharePoint"] },
     { id: 1, date: "JANVIER - FEVRIER 2024", role: "Stagiaire Développement", company: "Deezer (Paris)", desc: "Optimisation de requêtes SQL complexes pour l'analyse de données. Gestion des environnements conteneurisés.", tags: ["SQL", "Python", "Git"] },
@@ -36,11 +37,43 @@ const experiences = [
     { id: 4, date: "AVRIL - MAI 2022", role: "Stagiaire Support Utilisateur", company: "Experis France", desc: "Résolution d'incidents niveau 1. Installation de postes.", tags: ["Windows 10", "GLPI", "Active Directory"] }
 ];
 
-const veilleData = [
-    "Transition vers les architectures <strong>Serverless</strong> et <strong>Event-Driven</strong>. Comparatif technique AWS vs Azure.",
-    "Industrialisation via <strong>CI/CD</strong> (GitLab CI, Azure DevOps). Mise en œuvre de l'<strong>Infrastructure as Code (IaC)</strong>.",
-    "Agrégation via Feedly, tendances GitHub et veille sécurité (<strong>CVE/OWASP</strong>)."
+// --- DONNÉES VEILLE (Banque d'articles dynamique) ---
+const cloudNews = [
+    {
+        title: "L'évolution des architectures Serverless en 2024",
+        desc: "Comment AWS Lambda et Azure Functions transforment le développement en réduisant les coûts d'infrastructure et en améliorant la scalabilité.",
+        link: "https://aws.amazon.com/fr/blogs/architecture/"
+    },
+    {
+        title: "AWS vs Azure : Quel cloud choisir pour les bases de données ?",
+        desc: "Comparatif des performances et de la tarification entre Amazon RDS et Azure SQL Database pour les applications modernes.",
+        link: "https://azure.microsoft.com/fr-fr/blog/"
+    },
+    {
+        title: "La montée en puissance du Green IT dans le Cloud",
+        desc: "Les fournisseurs Cloud comme Google et AWS intègrent de nouveaux outils pour mesurer et réduire l'empreinte carbone des applications.",
+        link: "https://aws.amazon.com/fr/blogs/architecture/"
+    }
 ];
+
+const devopsNews = [
+    {
+        title: "GitLab CI/CD intègre de nouveaux outils d'analyse IA",
+        desc: "La nouvelle mise à jour de GitLab permet une détection automatique des failles de sécurité dans le code grâce à l'intelligence artificielle.",
+        link: "https://about.gitlab.com/blog/"
+    },
+    {
+        title: "Docker Desktop : Amélioration des performances de build",
+        desc: "Les dernières versions de Docker introduisent des fonctionnalités de mise en cache avancées, accélérant considérablement le temps de déploiement.",
+        link: "https://www.docker.com/blog/"
+    },
+    {
+        title: "Terraform : L'Infrastructure as Code devient la norme",
+        desc: "Pourquoi l'automatisation des infrastructures avec Terraform est devenue indispensable pour garantir des environnements iso-production fiables.",
+        link: "https://www.hashicorp.com/blog"
+    }
+];
+
 
 let activeExpIndex = 0;
 
@@ -48,6 +81,7 @@ window.onload = function() {
     const sections = document.querySelectorAll(".panel");
     const wrapper = document.getElementById("main-wrapper");
 
+    // Animation de défilement horizontal
     if (window.innerWidth > 1024) {
         gsap.to(sections, {
             xPercent: -100 * (sections.length - 1),
@@ -63,13 +97,30 @@ window.onload = function() {
     updateProject(0);
 };
 
+// Fonction Veille Dynamique
 function initVeille() {
-    for (let i = 0; i < veilleData.length; i++) {
-        const el = document.getElementById('veille-desc-' + i);
-        if (el) el.innerHTML = veilleData[i];
-    }
+    const today = new Date();
+    const start = new Date(today.getFullYear(), 0, 0);
+    const diff = today - start;
+    const oneDay = 1000 * 60 * 60 * 24;
+    const dayOfYear = Math.floor(diff / oneDay);
+
+    const currentCloudIndex = dayOfYear % cloudNews.length;
+    const currentDevopsIndex = dayOfYear % devopsNews.length;
+
+    const cloudItem = cloudNews[currentCloudIndex];
+    const devopsItem = devopsNews[currentDevopsIndex];
+
+    document.getElementById('veille-title-cloud').innerText = cloudItem.title;
+    document.getElementById('veille-desc-cloud').innerText = cloudItem.desc;
+    document.getElementById('veille-link-cloud').href = cloudItem.link;
+
+    document.getElementById('veille-title-devops').innerText = devopsItem.title;
+    document.getElementById('veille-desc-devops').innerText = devopsItem.desc;
+    document.getElementById('veille-link-devops').href = devopsItem.link;
 }
 
+// Fonction Rendu Projets
 function renderProjectList() {
     const container = document.getElementById('project-list-container');
     let html = '';
@@ -100,6 +151,7 @@ function updateProject(index) {
     }});
 }
 
+// Fonctions Expériences
 function renderExperienceNav() {
     const listContainer = document.getElementById('timeline-list');
     let html = '';
@@ -155,6 +207,7 @@ function updateExperienceDisplay(index) {
     }});
 }
 
+// Fonctions Menu & Navigation
 function goToSection(index) {
     const wrapper = document.getElementById("main-wrapper");
     if (window.innerWidth > 1024) {
@@ -169,46 +222,5 @@ function goToSection(index) {
 function openContact() { document.getElementById("contact-page").classList.remove("translate-y-full"); }
 function closeContact() { document.getElementById("contact-page").classList.add("translate-y-full"); }
 
-// --- MODIFICATION ICI : Lien vers le fichier CV local ---
-function openCV() { 
-    // Remplace 'cv.pdf' par le nom exact de ton fichier si différent
-    window.open('CV.pdf', '_blank'); 
-}
-// --- GESTION DU FORMULAIRE AVEC MESSAGE INTÉGRÉ ---
-const contactForm = document.querySelector('form');
-const successMsg = document.getElementById('contact-success');
-
-if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        const data = new FormData(this);
-        const submitBtn = this.querySelector('button[type="submit"]');
-
-        submitBtn.disabled = true;
-        submitBtn.innerText = "ENVOI...";
-
-        fetch(this.action, {
-            method: 'POST',
-            body: data,
-            headers: { 'Accept': 'application/json' }
-        }).then(response => {
-            if (response.ok) {
-                // 1. On affiche le message de succès en retirant la classe 'hidden'
-                successMsg.classList.remove('hidden');
-                
-                // 2. On réinitialise le formulaire
-                this.reset();
-
-                // 3. Optionnel : On peut masquer le message après quelques secondes
-                setTimeout(() => {
-                    successMsg.classList.add('hidden');
-                }, 5000);
-            }
-        }).finally(() => {
-            submitBtn.disabled = false;
-            submitBtn.innerText = "Envoyer le message";
-        });
-    });
-}
-
+// Lien CV Local
+function openCV() { window.open('cv.pdf', '_blank'); }
