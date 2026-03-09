@@ -28,16 +28,59 @@ const projectsData = [
     }
 ];
 
-// --- DONNÉES EXPERIENCES ---
+// --- DONNÉES EXPERIENCES (Mise à jour avec La Dictée Géante) ---
 const experiences = [
-    { id: 0, date: "MAI 2025 - JUIN 2025", role: "Stagiaire Développement no-code", company: "Equans (Courbevoie)", desc: "Développement d'applications métiers rapides pour optimiser les processus internes. Automatisation de flux de données.", tags: ["Power Apps", "Power Automate", "SharePoint"] },
-    { id: 1, date: "JANVIER - FEVRIER 2024", role: "Stagiaire Développement", company: "Deezer (Paris)", desc: "Optimisation de requêtes SQL complexes pour l'analyse de données. Gestion des environnements conteneurisés.", tags: ["SQL", "Python", "Git"] },
-    { id: 2, date: "SEPTEMBRE - OCTOBRE 2023", role: "Stagiaire Support & Dev", company: "Evolukid (Nanterre)", desc: "Support technique et scripts correctifs.", tags: ["JavaScript", "Support", "Debugging"] },
-    { id: 3, date: "NOV 2022 - MARS 2023", role: "Stagiaire – Projet logistique", company: "Bred Banque Populaire", desc: "Gestion de parc et logistique informatique.", tags: ["Gestion de Parc", "Excel"] },
-    { id: 4, date: "AVRIL - MAI 2022", role: "Stagiaire Support Utilisateur", company: "Experis France", desc: "Résolution d'incidents niveau 1. Installation de postes.", tags: ["Windows 10", "GLPI", "Active Directory"] }
+    { 
+        id: 0, 
+        date: "DÉC 2025 - FÉV 2026", 
+        role: "Stage en développement web", 
+        company: "La Dictée Géante", 
+        desc: "Développement d'interfaces web interactives en HTML, CSS et JavaScript. Conception et réalisation des maquettes en amont sur Figma pour valider l'expérience utilisateur.", 
+        tags: ["HTML/CSS", "JavaScript", "Figma"] 
+    },
+    { 
+        id: 1, 
+        date: "MAI 2025 - JUIN 2025", 
+        role: "Stagiaire Développement no-code", 
+        company: "Equans (Courbevoie)", 
+        desc: "Développement d'applications métiers rapides pour optimiser les processus internes. Automatisation de flux de données.", 
+        tags: ["Power Apps", "Power Automate", "SharePoint"] 
+    },
+    { 
+        id: 2, 
+        date: "JANVIER - FEVRIER 2024", 
+        role: "Stagiaire Développement", 
+        company: "Deezer (Paris)", 
+        desc: "Optimisation de requêtes SQL complexes pour l'analyse de données. Gestion des environnements conteneurisés.", 
+        tags: ["SQL", "Python", "Git"] 
+    },
+    { 
+        id: 3, 
+        date: "SEPTEMBRE - OCTOBRE 2023", 
+        role: "Stagiaire Support & Dev", 
+        company: "Evolukid (Nanterre)", 
+        desc: "Support technique et scripts correctifs.", 
+        tags: ["JavaScript", "Support", "Debugging"] 
+    },
+    { 
+        id: 4, 
+        date: "NOV 2022 - MARS 2023", 
+        role: "Stagiaire – Projet logistique", 
+        company: "Bred Banque Populaire", 
+        desc: "Gestion de parc et logistique informatique.", 
+        tags: ["Gestion de Parc", "Excel"] 
+    },
+    { 
+        id: 5, 
+        date: "AVRIL - MAI 2022", 
+        role: "Stagiaire Support Utilisateur", 
+        company: "Experis France", 
+        desc: "Résolution d'incidents niveau 1. Installation de postes.", 
+        tags: ["Windows 10", "GLPI", "Active Directory"] 
+    }
 ];
 
-// --- DONNÉES VEILLE (Banque d'articles dynamique) ---
+// --- DONNÉES VEILLE ---
 const cloudNews = [
     {
         title: "L'évolution des architectures Serverless en 2024",
@@ -92,7 +135,7 @@ window.onload = function() {
 
     renderProjectList();
     renderExperienceNav();
-    updateExperienceDisplay(0);
+    updateExperienceDisplay(0); // Affiche la première expérience par défaut (La Dictée Géante)
     initVeille();
     updateProject(0);
 };
@@ -224,4 +267,3 @@ function closeContact() { document.getElementById("contact-page").classList.add(
 
 // Lien CV Local
 function openCV() { window.open('CV.pdf', '_blank'); }
-
