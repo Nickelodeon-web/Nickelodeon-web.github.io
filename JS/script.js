@@ -266,4 +266,7 @@ function openContact() { document.getElementById("contact-page").classList.remov
 function closeContact() { document.getElementById("contact-page").classList.add("translate-y-full"); }
 
 // Lien CV Local
-function openCV() { window.open('CV.pdf', '_blank'); }
+function openCV() { 
+    window.location.href = 'CV.pdf'; 
+}
+
