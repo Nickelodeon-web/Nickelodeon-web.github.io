@@ -8,7 +8,9 @@ const projectsData = [
         listBadge: "C# / MySQL",
         shortDesc: "Application desktop pour la gestion de rapports techniques avec design Figma.",
         desc: "Application de gestion des rapports de visite pour techniciens itinérants. Conception UX/UI complète sur Figma avant intégration. Développement de l'interface logicielle en C# et persistance des données sécurisée via MySQL.",
-        image: "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&q=80&w=1000"
+        image: "img/photo-pharmasi.avif", 
+        githubLink: "https://github.com/Flaimeur/PharmaSI2", 
+        detailsLink: "details/Documentation pharmasi.pdf" 
     },
     {
         title: "Supermarché en ligne",
@@ -16,7 +18,9 @@ const projectsData = [
         listBadge: "PHP / MySQL / HTML",
         shortDesc: "Plateforme e-commerce native pour la gestion de commandes et de produits.",
         desc: "Conception et développement d'un site e-commerce de A à Z sans framework. Gestion des sessions utilisateurs, panier dynamique, catalogue produits et back-office administrateur.",
-        image: "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80&w=1000"
+        image: "img/photo-superMarche.avif", 
+        githubLink: "https://github.com/Flaimeur/Supermarche", 
+        detailsLink: "details/"
     },
     {
         title: "Jeu de Tir sur Cible",
@@ -24,11 +28,24 @@ const projectsData = [
         listBadge: "JS / PHP / MySQL",
         shortDesc: "Jeu interactif full-stack : moteur physique JS et backend PHP sécurisé.",
         desc: "Développement itératif d'un jeu de tir complet. Frontend animé en JS (moteur physique, système de vent aléatoire). Backend robuste en PHP/MySQL assurant la sécurité et la gestion des scores.",
-        image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=1000"
+        image: "img/photo-cible-game.avif", 
+        githubLink: "https://github.com/Nickelodeon-web/Jeu-de-Tir-sur-Cible", 
+        detailsLink: "details/documentation-jeux-cible.pdf" 
+    },
+    // NOUVEAU PROJET AJOUTÉ ICI
+    {
+        title: "Gestion de Parc (GLPI)",
+        badge: "ITSM / GLPI / XAMPP",
+        listBadge: "ITSM / GLPI",
+        shortDesc: "Installation et configuration d'une solution de gestion de parc et helpdesk.",
+        desc: "Mise en place complète de l'outil GLPI pour la gestion d'une infrastructure informatique. Configuration de l'inventaire automatique, gestion des tickets (assistance) et mise en place d'une base de connaissances.",
+        image: "img/photo-glpi.avif", // Assure-toi d'avoir cette image dans ton dossier img
+        githubLink: "#", // À remplir si tu as un dépôt de config
+        detailsLink: "details/Documentation GLPI.pdf" // À adapter selon ton fichier
     }
 ];
 
-// --- DONNÉES EXPERIENCES (Mise à jour avec La Dictée Géante) ---
+// --- DONNÉES EXPERIENCES ---
 const experiences = [
     { 
         id: 0, 
@@ -36,15 +53,17 @@ const experiences = [
         role: "Stage en développement web", 
         company: "La Dictée Géante", 
         desc: "Développement d'interfaces web interactives en HTML, CSS et JavaScript. Conception et réalisation des maquettes en amont sur Figma pour valider l'expérience utilisateur.", 
-        tags: ["HTML/CSS", "JavaScript", "Figma"] 
+        tags: ["HTML/CSS", "JavaScript", "Figma"],
+        reportLink: "rapport de stage/rapport de stage dictée géante.pdf"
     },
     { 
         id: 1, 
         date: "MAI 2025 - JUIN 2025", 
-        role: "Stagiaire Développement no-code", 
+        role: "Stagiaire Développement Low-code", 
         company: "Equans (Courbevoie)", 
         desc: "Développement d'applications métiers rapides pour optimiser les processus internes. Automatisation de flux de données.", 
-        tags: ["Power Apps", "Power Automate", "SharePoint"] 
+        tags: ["Power Apps", "Power Automate", "SharePoint"],
+        reportLink: "rapport de stage/rapport de stage Equans .pdf"
     },
     { 
         id: 2, 
@@ -52,7 +71,8 @@ const experiences = [
         role: "Stagiaire Développement", 
         company: "Deezer (Paris)", 
         desc: "Optimisation de requêtes SQL complexes pour l'analyse de données. Gestion des environnements conteneurisés.", 
-        tags: ["SQL", "Python", "Git"] 
+        tags: ["SQL", "Python", "Git"],
+        reportLink: "rapport de stage/Rapport_PFMP4-SANTAKI-YANIS-TR3_2023-2024.pdf"
     },
     { 
         id: 3, 
@@ -60,7 +80,8 @@ const experiences = [
         role: "Stagiaire Support & Dev", 
         company: "Evolukid (Nanterre)", 
         desc: "Support technique et scripts correctifs.", 
-        tags: ["JavaScript", "Support", "Debugging"] 
+        tags: ["JavaScript", "Support", "Debugging"],
+        reportLink: "rapport de stage/Rapport PFMP3-SANTAKI-Yanis-TR3 2023.pdf"
     },
     { 
         id: 4, 
@@ -68,7 +89,8 @@ const experiences = [
         role: "Stagiaire – Projet logistique", 
         company: "Bred Banque Populaire", 
         desc: "Gestion de parc et logistique informatique.", 
-        tags: ["Gestion de Parc", "Excel"] 
+        tags: ["Gestion de Parc", "Excel"],
+        reportLink: "rapport de stage/Rapport PFMP1-SANTAKI-Yanis-1R3 2023.PDF.pdf"
     },
     { 
         id: 5, 
@@ -76,47 +98,10 @@ const experiences = [
         role: "Stagiaire Support Utilisateur", 
         company: "Experis France", 
         desc: "Résolution d'incidents niveau 1. Installation de postes.", 
-        tags: ["Windows 10", "GLPI", "Active Directory"] 
+        tags: ["Windows 10", "GLPI", "Active Directory"],
+        reportLink: "chemin/vers/rapport6.pdf"
     }
 ];
-
-// --- DONNÉES VEILLE ---
-const cloudNews = [
-    {
-        title: "L'évolution des architectures Serverless en 2024",
-        desc: "Comment AWS Lambda et Azure Functions transforment le développement en réduisant les coûts d'infrastructure et en améliorant la scalabilité.",
-        link: "https://aws.amazon.com/fr/blogs/architecture/"
-    },
-    {
-        title: "AWS vs Azure : Quel cloud choisir pour les bases de données ?",
-        desc: "Comparatif des performances et de la tarification entre Amazon RDS et Azure SQL Database pour les applications modernes.",
-        link: "https://azure.microsoft.com/fr-fr/blog/"
-    },
-    {
-        title: "La montée en puissance du Green IT dans le Cloud",
-        desc: "Les fournisseurs Cloud comme Google et AWS intègrent de nouveaux outils pour mesurer et réduire l'empreinte carbone des applications.",
-        link: "https://aws.amazon.com/fr/blogs/architecture/"
-    }
-];
-
-const devopsNews = [
-    {
-        title: "GitLab CI/CD intègre de nouveaux outils d'analyse IA",
-        desc: "La nouvelle mise à jour de GitLab permet une détection automatique des failles de sécurité dans le code grâce à l'intelligence artificielle.",
-        link: "https://about.gitlab.com/blog/"
-    },
-    {
-        title: "Docker Desktop : Amélioration des performances de build",
-        desc: "Les dernières versions de Docker introduisent des fonctionnalités de mise en cache avancées, accélérant considérablement le temps de déploiement.",
-        link: "https://www.docker.com/blog/"
-    },
-    {
-        title: "Terraform : L'Infrastructure as Code devient la norme",
-        desc: "Pourquoi l'automatisation des infrastructures avec Terraform est devenue indispensable pour garantir des environnements iso-production fiables.",
-        link: "https://www.hashicorp.com/blog"
-    }
-];
-
 
 let activeExpIndex = 0;
 
@@ -124,7 +109,6 @@ window.onload = function() {
     const sections = document.querySelectorAll(".panel");
     const wrapper = document.getElementById("main-wrapper");
 
-    // Animation de défilement horizontal
     if (window.innerWidth > 1024) {
         gsap.to(sections, {
             xPercent: -100 * (sections.length - 1),
@@ -135,35 +119,64 @@ window.onload = function() {
 
     renderProjectList();
     renderExperienceNav();
-    updateExperienceDisplay(0); // Affiche la première expérience par défaut (La Dictée Géante)
+    updateExperienceDisplay(0);
     initVeille();
     updateProject(0);
 };
 
-// Fonction Veille Dynamique
+// Fonction Veille Automatisée avec gestion du vide/erreurs
 function initVeille() {
-    const today = new Date();
-    const start = new Date(today.getFullYear(), 0, 0);
-    const diff = today - start;
-    const oneDay = 1000 * 60 * 60 * 24;
-    const dayOfYear = Math.floor(diff / oneDay);
+    const veilleConfigs = [
+        {
+            url: "https://www.google.com/alerts/feeds/04529051921103295237/7866444721482751126",
+            titleId: 'veille-title-cloud',
+            descId: 'veille-desc-cloud',
+            linkId: 'veille-link-cloud'
+        },
+        {
+            url: "https://www.google.com/alerts/feeds/04529051921103295237/7866444721482747998",
+            titleId: 'veille-title-devops',
+            descId: 'veille-desc-devops',
+            linkId: 'veille-link-devops'
+        }
+    ];
 
-    const currentCloudIndex = dayOfYear % cloudNews.length;
-    const currentDevopsIndex = dayOfYear % devopsNews.length;
+    for (let i = 0; i < veilleConfigs.length; i++) {
+        const config = veilleConfigs[i];
+        const apiUrl = "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent(config.url);
 
-    const cloudItem = cloudNews[currentCloudIndex];
-    const devopsItem = devopsNews[currentDevopsIndex];
+        fetch(apiUrl)
+            .then(response => response.json())
+            .then(data => {
+                const titleEl = document.getElementById(config.titleId);
+                const descEl = document.getElementById(config.descId);
 
-    document.getElementById('veille-title-cloud').innerText = cloudItem.title;
-    document.getElementById('veille-desc-cloud').innerText = cloudItem.desc;
-    document.getElementById('veille-link-cloud').href = cloudItem.link;
+                if (data && data.items && data.items.length > 0) {
+                    const latest = data.items[0];
+                    
+                    function stripHtml(html) {
+                        let tmp = document.createElement("DIV");
+                        tmp.innerHTML = html;
+                        return tmp.textContent || tmp.innerText || "";
+                    }
 
-    document.getElementById('veille-title-devops').innerText = devopsItem.title;
-    document.getElementById('veille-desc-devops').innerText = devopsItem.desc;
-    document.getElementById('veille-link-devops').href = devopsItem.link;
+                    titleEl.innerText = stripHtml(latest.title);
+                    descEl.innerText = stripHtml(latest.content || latest.description);
+                    document.getElementById(config.linkId).href = latest.link;
+                } else {
+                    // SI LE FLUX EST VIDE (pas encore d'alertes trouvées par Google)
+                    titleEl.innerText = "En attente d'actualités...";
+                    descEl.innerText = "Google Alerts n'a pas encore trouvé de nouveaux articles pour ce sujet aujourd'hui.";
+                }
+            })
+            .catch(error => {
+                console.error("Erreur RSS:", error);
+                document.getElementById(config.titleId).innerText = "Flux temporairement indisponible";
+                document.getElementById(config.descId).innerText = "Impossible de charger les données. Vérifiez votre connexion ou le lien RSS.";
+            });
+    }
 }
 
-// Fonction Rendu Projets
 function renderProjectList() {
     const container = document.getElementById('project-list-container');
     let html = '';
@@ -190,11 +203,12 @@ function updateProject(index) {
         document.getElementById('project-display-title').innerText = project.title;
         document.getElementById('project-display-badge').innerText = project.badge;
         document.getElementById('project-display-desc').innerText = project.desc;
+        document.getElementById('project-display-details').href = project.detailsLink; 
+        document.getElementById('project-display-github').href = project.githubLink; 
         gsap.to(displayArea, { opacity: 1, y: 0, duration: 0.4 });
     }});
 }
 
-// Fonctions Expériences
 function renderExperienceNav() {
     const listContainer = document.getElementById('timeline-list');
     let html = '';
@@ -224,7 +238,6 @@ function updateExperienceDisplay(index) {
     const activeItem = document.getElementById(`exp-item-${index}`);
     if(activeItem) {
         activeItem.classList.add('active');
-        
         if (index === experiences.length - 1) {
             progressLine.style.height = "100%";
         } else {
@@ -245,12 +258,15 @@ function updateExperienceDisplay(index) {
             <h3 class="text-4xl md:text-5xl font-black text-white mb-2 uppercase leading-tight">${exp.role}</h3>
             <h4 class="text-xl text-blue-500 mb-8 font-bold">${exp.company}</h4>
             <p class="text-zinc-400 text-lg leading-relaxed mb-10 max-w-2xl">${exp.desc}</p>
-            <div class="flex flex-wrap gap-3">${tagsHtml}</div>`;
+            <div class="flex flex-wrap gap-3 mb-8">${tagsHtml}</div>
+            <a href="${exp.reportLink}" class="inline-flex px-5 py-2 bg-blue-600 rounded-xl text-xs md:text-sm font-bold text-white hover:bg-blue-500 transition-all items-center gap-2">
+                RAPPORT DE STAGE
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            </a>`;
         gsap.to(contentDiv, { opacity: 1, y: 0, duration: 0.4 });
     }});
 }
 
-// Fonctions Menu & Navigation
 function goToSection(index) {
     const wrapper = document.getElementById("main-wrapper");
     if (window.innerWidth > 1024) {
@@ -265,8 +281,6 @@ function goToSection(index) {
 function openContact() { document.getElementById("contact-page").classList.remove("translate-y-full"); }
 function closeContact() { document.getElementById("contact-page").classList.add("translate-y-full"); }
 
-// Lien CV Local
 function openCV() { 
-    window.location.href = 'CV.pdf'; 
+    window.location.href = 'CV-portfolio.pdf'; 
 }
-
