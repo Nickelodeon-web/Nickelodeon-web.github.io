@@ -28,17 +28,18 @@ body {
 }
 
 .glass-nav { background: rgba(10, 10, 11, 0.8); backdrop-filter: blur(12px); border-bottom: 1px solid #27272a; }
-.outline-text { -webkit-text-stroke: 1px #3f3f46; color: transparent; }
+
+/* MODIFICATION ICI : Épaisseur d'origine (1px) mais en blanc, texte transparent (creux) */
+.outline-text { -webkit-text-stroke: 1px white; color: transparent; }
 
 /* Bento */
 .bento-grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(2, 1fr); gap: 1.5rem; height: 100%; }
 .bento-item { background: var(--surface); border: 1px solid #27272a; border-radius: 2rem; padding: 2.5rem; transition: all 0.4s ease; }
 .bento-item:hover { border-color: var(--accent); }
 
-/* Stacks (Modifié : Couleurs directes) */
+/* Stacks */
 .stack-row { display: flex; align-items: center; gap: 1.5rem; padding: 0.75rem 0; transition: transform 0.2s ease; cursor: default; }
 .stack-row:hover { transform: translateX(10px); }
-/* Le filtre blanc a été supprimé pour laisser les vraies couleurs affichées par défaut */
 .stack-icon { transition: transform 0.3s ease; } 
 
 .tech-tag { display: flex; align-items: center; gap: 0.75rem; background: #000; border: 1px solid #27272a; padding: 0.6rem 1.2rem; border-radius: 12px; font-size: 0.85rem; font-family: 'JetBrains Mono', monospace; }
