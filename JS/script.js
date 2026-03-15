@@ -53,7 +53,7 @@ const experiences = [
         company: "La Dictée Géante", 
         desc: "Développement d'interfaces web interactives en HTML, CSS et JavaScript. Conception et réalisation des maquettes en amont sur Figma pour valider l'expérience utilisateur.", 
         tags: ["HTML/CSS", "JavaScript", "Figma"],
-        reportLink: "details/rapport de stage dictée géante.pdf"
+        reportLink: "rapport de stage/rapport de stage dictée géante.pdf"
     },
     { 
         id: 1, 
