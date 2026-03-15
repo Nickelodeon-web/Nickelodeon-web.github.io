@@ -36,7 +36,7 @@ const projectsData = [
         title: "GLPI",
         badge: "Apache / MySQL/MariaDB / PHP / HTML/CSS/JavaScript",
         listBadge: "Linux / GLPI",
-        shortDesc: "Gestion de parc informatique et Helpdesk (ITIL).",
+        shortDesc: "Gestion de parc informatique et Support technique.",
         desc: "Ce projet porte sur l’utilisation de GLPI, un outil de gestion de support informatique (gestion de tickets). Le but est de montrer comment un client signale un problème et comment l’administrateur le traite jusqu’à sa résolution.",
         image: "img/data-center.webp",
          githubLink: "",// Laisse vide ou mets ton lien si tu en as un
