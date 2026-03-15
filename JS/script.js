@@ -38,7 +38,7 @@ const projectsData = [
         listBadge: "Linux / GLPI",
         shortDesc: "Gestion de parc informatique et Helpdesk (ITIL).",
         desc: "Mise en œuvre d'une solution de gestion d'actifs (ITAM) et de support (Helpdesk). Configuration d'un serveur LAMP, gestion des inventaires automatisés et des tickets d'incidents.",
-        image: "img/photo-glpi.avif",
+        image: "img/data-center.webp",
          githubLink: "",// Laisse vide ou mets ton lien si tu en as un
         detailsLink: "details/documentation-glpi.pdf"
     },
