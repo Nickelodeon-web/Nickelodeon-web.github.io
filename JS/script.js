@@ -53,7 +53,7 @@ const experiences = [
         company: "La Dictée Géante", 
         desc: "Développement d'interfaces web interactives en HTML, CSS et JavaScript. Conception et réalisation des maquettes en amont sur Figma pour valider l'expérience utilisateur.", 
         tags: ["HTML/CSS", "JavaScript", "Figma"],
-        reportLink: "details/"
+        reportLink: "details/rapport de stage dictée géante.pdf"
     },
     { 
         id: 1, 
@@ -62,7 +62,7 @@ const experiences = [
         company: "Equans (Courbevoie)", 
         desc: "Développement d'applications métiers rapides pour optimiser les processus internes. Automatisation de flux de données.", 
         tags: ["Power Apps", "Power Automate", "SharePoint"],
-        reportLink: "details/"
+        reportLink: "rapport de stage/rapport de stage Equans .pdf"
     },
     { 
         id: 2, 
@@ -71,7 +71,7 @@ const experiences = [
         company: "Deezer (Paris)", 
         desc: "Optimisation de requêtes SQL complexes pour l'analyse de données. Gestion des environnements conteneurisés.", 
         tags: ["SQL", "Python", "Git"],
-        reportLink: "details/"
+        reportLink: "rapport de stage/Rapport_PFMP4-SANTAKI-YANIS-TR3_2023-2024.pdf"
     },
     { 
         id: 3, 
@@ -80,7 +80,7 @@ const experiences = [
         company: "Evolukid (Nanterre)", 
         desc: "Support technique et scripts correctifs.", 
         tags: ["JavaScript", "Support", "Debugging"],
-        reportLink: "details/"
+        reportLink: "rapport de stage/Rapport PFMP3-SANTAKI-Yanis-TR3 2023.pdf"
     },
     { 
         id: 4, 
@@ -89,7 +89,7 @@ const experiences = [
         company: "Bred Banque Populaire", 
         desc: "Gestion de parc et logistique informatique.", 
         tags: ["Gestion de Parc", "Excel"],
-        reportLink: "details/"
+        reportLink: "rapport de stage/Rapport PFMP1-SANTAKI-Yanis-1R3 2023.PDF.pdf"
     },
     { 
         id: 5, 
@@ -98,7 +98,7 @@ const experiences = [
         company: "Experis France", 
         desc: "Résolution d'incidents niveau 1. Installation de postes.", 
         tags: ["Windows 10", "GLPI", "Active Directory"],
-        reportLink: "details/"
+        reportLink: "rapport de stage/"
     }
 ];
 
