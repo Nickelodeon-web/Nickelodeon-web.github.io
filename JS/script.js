@@ -58,7 +58,7 @@ const experiences = [
     { 
         id: 1, 
         date: "MAI 2025 - JUIN 2025", 
-        role: "Stagiaire Développement no-code", 
+        role: "Stagiaire Développement low-code", 
         company: "Equans (Courbevoie)", 
         desc: "Développement d'applications métiers rapides pour optimiser les processus internes. Automatisation de flux de données.", 
         tags: ["Power Apps", "Power Automate", "SharePoint"],
