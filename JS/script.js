@@ -34,10 +34,10 @@ const projectsData = [
     },
     {
         title: "GLPI",
-        badge: "Linux / PHP / MySQL",
+        badge: "Apache / MySQL/MariaDB / PHP / HTML/CSS/JavaScript",
         listBadge: "Linux / GLPI",
         shortDesc: "Gestion de parc informatique et Helpdesk (ITIL).",
-        desc: "Mise en œuvre d'une solution de gestion d'actifs (ITAM) et de support (Helpdesk). Configuration d'un serveur LAMP, gestion des inventaires automatisés et des tickets d'incidents.",
+        desc: "Ce projet porte sur l’utilisation de GLPI, un outil de gestion de support informatique (gestion de tickets). Le but est de montrer comment un client signale un problème et comment l’administrateur le traite jusqu’à sa résolution.",
         image: "img/data-center.webp",
          githubLink: "",// Laisse vide ou mets ton lien si tu en as un
         detailsLink: "details/GLPI_yanis.pdf"
