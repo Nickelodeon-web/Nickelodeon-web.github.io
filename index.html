@@ -19,10 +19,11 @@
         <div class="text-xl font-extrabold tracking-tighter cursor-pointer z-50" onclick="goToSection(0)">SANTAKI<span class="text-blue-500">.</span>DEV</div>
         
         <div class="hidden lg:flex gap-8 mono text-[10px] uppercase tracking-widest text-white">
-            <button onclick="goToSection(1)" class="hover:text-blue-500 transition-colors">Compétence</button>
-            <button onclick="goToSection(2)" class="hover:text-blue-500 transition-colors">Projets</button>
-            <button onclick="goToSection(3)" class="hover:text-blue-500 transition-colors">Expérience</button>
-            <button onclick="goToSection(4)" class="hover:text-blue-500 transition-colors">Veille</button>
+            <button onclick="goToSection(1)" class="hover:text-blue-500 transition-colors">Parcours</button>
+            <button onclick="goToSection(2)" class="hover:text-blue-500 transition-colors">Compétence</button>
+            <button onclick="goToSection(3)" class="hover:text-blue-500 transition-colors">Projets</button>
+            <button onclick="goToSection(4)" class="hover:text-blue-500 transition-colors">Expérience</button>
+            <button onclick="goToSection(5)" class="hover:text-blue-500 transition-colors">Veille</button>
         </div>
 
         <div class="flex items-center gap-4 z-50">
@@ -35,27 +36,23 @@
         <section id="hero" class="panel bg-black relative flex flex-col justify-center">
             <div class="max-w-5xl 2xl:max-w-7xl mt-24 md:mt-0 w-full">
                 <p class="mono text-blue-500 mb-4 2xl:mb-6 uppercase tracking-widest text-[10px] md:text-xs 2xl:text-base">Initialisation du système...</p>
-                
                 <h1 class="text-5xl md:text-8xl 2xl:text-[8rem] font-black leading-tight tracking-tighter mb-6 2xl:mb-10">
                     DÉVELOPPEUR <br> <span class="outline-text">APPLICATIF</span>
                 </h1>
-                
                 <p class="text-base md:text-xl 2xl:text-2xl text-zinc-400 max-w-xl 2xl:max-w-3xl mb-10 2xl:mb-14 leading-relaxed 2xl:leading-normal">
                     Étudiant en BTS SIO SLAM (2ème année). <br>Expertise en architecture logicielle et résolution de problèmes métiers.
                 </p>
-                
                 <div class="flex flex-col md:flex-row items-center gap-6 2xl:gap-10 w-full md:w-auto">
                     <button onclick="openCV()" class="w-full md:w-auto px-8 py-4 2xl:px-10 2xl:py-5 bg-white text-black rounded-xl font-bold 2xl:text-xl hover:bg-blue-500 hover:text-white transition-all flex items-center justify-center gap-2">
                         <span>CV</span>
                         <svg class="w-4 h-4 2xl:w-5 2xl:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
                     </button>
-                    
                     <div class="flex gap-6 2xl:gap-8 items-center w-full md:w-auto justify-center md:justify-start md:pl-6 2xl:pl-10 md:border-l border-zinc-800">
                         <a href="https://www.linkedin.com/in/yanis-santaki/" target="_blank" class="text-zinc-500 hover:text-blue-500 transition-colors flex items-center gap-2 2xl:gap-3 text-sm 2xl:text-lg font-bold group">
                             <svg class="w-5 h-5 2xl:w-7 2xl:h-7 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                             LINKEDIN
                         </a>
-                        <a href="https://github.com/Nickelodeon-web" target="_blank" class="text-zinc-500 hover:text-white transition-colors flex items-center gap-2 2xl:gap-3 text-sm 2xl:text-lg font-bold group">
+                        <a href="https://github.com/Flaimeur" target="_blank" class="text-zinc-500 hover:text-white transition-colors flex items-center gap-2 2xl:gap-3 text-sm 2xl:text-lg font-bold group">
                             <svg class="w-5 h-5 2xl:w-7 2xl:h-7 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                             GITHUB
                         </a>
@@ -64,14 +61,141 @@
             </div>
         </section>
 
-        <section id="about" class="panel bg-zinc-950">
+       <section id="parcours" class="panel bg-black">
+            <div class="flex items-center gap-4 mb-8 flex-shrink-0">
+                <h2 class="text-4xl 2xl:text-6xl font-black uppercase tracking-tighter text-white">Mon Parcours</h2>
+                <div class="h-px flex-grow bg-gradient-to-r from-blue-500 to-transparent opacity-30"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 w-full h-full max-h-[85vh]">
+                
+                <div class="lg:col-span-6 flex flex-col gap-4 h-full">
+                    
+                    <div class="flex-1 bg-zinc-900/40 backdrop-blur-md border border-blue-500/30 rounded-3xl p-6 relative group hover:border-blue-500 transition-all duration-500 overflow-hidden flex flex-col justify-center">
+                        <div class="flex justify-between items-start relative z-10 mb-2">
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-blue-500/20 flex items-center justify-center text-blue-500 shadow-[0_0_15px_rgba(59,130,246,0.3)]">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-black text-white uppercase tracking-tight">BTS SIO</h3>
+                                    <p class="text-zinc-400 font-bold text-[10px] uppercase tracking-wider">Lycée Louis Armand</p>
+                                </div>
+                            </div>
+                            <span class="mono text-[10px] bg-blue-600 text-white px-3 py-1 rounded-full font-bold shadow-[0_0_10px_#2563eb]">2024 - ACTUEL</span>
+                        </div>
+                        <p class="text-white text-sm leading-relaxed mb-4">Formation supérieure d'excellence axée sur la gestion de parc informatique, le développement d'applications, et la cybersécurité en entreprise.</p>
+                        <div class="flex gap-2">
+                            <span class="text-[8px] mono bg-zinc-800 text-blue-400 border border-blue-500/30 px-2 py-1 rounded uppercase font-black tracking-widest">● Développement</span>
+                            <span class="text-[8px] mono bg-zinc-800 text-zinc-500 border border-blue-500/30 px-2 py-1 rounded uppercase font-black tracking-widest">● Maintenance</span>
+                        </div>
+                    </div>
+
+                    <div class="flex-1 bg-zinc-900/20 border border-blue-500/30 rounded-3xl p-6 relative group hover:border-blue-500 transition-all duration-300 flex flex-col justify-center">
+                        <div class="flex justify-between items-start mb-2">
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 rounded-lg bg-zinc-800 flex items-center justify-center text-zinc-500 group-hover:text-blue-500 transition-colors">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 113 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-white uppercase tracking-tight">Bac Pro RISC</h3>
+                                    <p class="text-zinc-500 text-[10px] font-medium uppercase tracking-wider">Lycée Gustave Ferrié</p>
+                                </div>
+                            </div>
+                            <span class="mono text-[8px] border border-blue-500/30 text-zinc-500 px-2 py-1 rounded-full">2022 - 2024</span>
+                        </div>
+                        <p class="text-white text-sm italic leading-relaxed">Spécialisation dans les réseaux informatiques et les systèmes communicants, incluant l'installation et la maintenance d'infrastructures.</p>
+                        <div class="mt-3 flex items-center gap-2">
+                            <span class="text-[10px] mono text-white uppercase tracking-widest font-bold"><span class="text-blue-500">★</span> Mention : Bien</span>
+                        </div>
+                    </div>
+
+                    <div class="flex-1 bg-zinc-900/10 border border-blue-500/30 rounded-3xl p-6 relative group hover:border-blue-500 transition-all duration-300 flex flex-col justify-center">
+                        <div class="flex justify-between items-start">
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 rounded-lg bg-zinc-900 flex items-center justify-center text-zinc-600">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.168.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5s3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-white uppercase tracking-tight">Brevet des Collèges</h3>
+                                    <p class="text-zinc-600 text-[10px] font-medium uppercase tracking-wider">Lycée Abbé Grégoire</p>
+                                </div>
+                            </div>
+                            <span class="mono text-[8px] border border-blue-500/30 text-zinc-700 px-2 py-1 rounded-full">2017 - 2021</span>
+                        </div>
+                        <div class="mt-3 flex items-center gap-2">
+                            <span class="text-[10px] mono text-white uppercase tracking-widest font-bold"><span class="text-blue-500">★</span> Mention : Assez Bien</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6 flex flex-col gap-6">
+                    
+                    <div class="bg-zinc-900/30 border border-blue-500/30 rounded-[2rem] p-8 relative overflow-hidden group">
+                        <div class="relative z-10">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="h-px w-8 bg-blue-500 shadow-[0_0_10px_#3b82f6]"></div>
+                                <h3 class="mono text-xs text-blue-500 uppercase tracking-[0.3em] font-black">Le Diplôme</h3>
+                            </div>
+                            <h4 class="text-2xl font-black text-white mb-4 uppercase tracking-tighter">BTS Services Informatiques (SIO)</h4>
+                            <p class="text-white text-sm leading-relaxed">
+                                Diplôme d'État formant aux métiers de la conception, de la maintenance et du support des infrastructures informatiques. Il répond aux besoins numériques via le <span class="text-blue-500 font-bold">développement applicatif</span> et les <span class="text-white font-black italic underline decoration-blue-500/50 underline-offset-4">infrastructures réseau</span>.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 flex-grow">
+                        
+                        <div class="bg-blue-600/5 border border-blue-500/30 rounded-3xl p-8 flex flex-col relative group overflow-hidden h-full shadow-lg">
+                            <div class="absolute top-0 left-0 w-full h-0.5 bg-blue-500 shadow-[0_0_10px_#3b82f6]"></div>
+                            <div class="w-14 h-14 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-500 mb-6 group-hover:scale-110 transition-transform duration-500">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                            </div>
+                            <h4 class="text-3xl font-black text-white mb-1 tracking-tighter italic">S.L.A.M</h4>
+                            <p class="text-blue-500 mono text-xs uppercase tracking-widest mb-6 font-black">DEVELOPMENT / APPLICATIONS</p>
+                            
+                            <p class="text-white text-base leading-relaxed text-justify mb-8">
+                                L’option <b class="text-blue-400 font-bold">Solutions Logicielles et Applications Métiers</b> est orientée vers le développement informatique. Elle forme à la création de sites web, logiciels et applications, ainsi qu’à la gestion de BDD.
+                            </p>
+                            
+                            <ul class="text-sm mono text-blue-300/80 space-y-3 mt-auto font-bold">
+                                <li class="flex items-center gap-3"><span>▹</span> Développement Web & Applications</li>
+                                <li class="flex items-center gap-3"><span>▹</span> Programmation (Java, Python, PHP, JS)</li>
+                                <li class="flex items-center gap-3"><span>▹</span> Bases de données (SQL)</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-blue-600/5 border border-blue-500/30 rounded-3xl p-8 flex flex-col relative group overflow-hidden h-full shadow-lg">
+                            <div class="absolute top-0 left-0 w-full h-0.5 bg-blue-500 shadow-[0_0_10px_#3b82f6]"></div>
+                            <div class="w-14 h-14 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-500 mb-6 group-hover:scale-110 transition-transform duration-500">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2"/></svg>
+                            </div>
+                            <h4 class="text-3xl font-black text-white mb-1 tracking-tighter italic">S.I.S.R</h4>
+                            <p class="text-blue-500 mono text-xs uppercase tracking-widest mb-6 font-black">INFRASTRUCTURE / NETWORKS</p>
+                            
+                            <p class="text-white text-base leading-relaxed text-justify mb-8">
+                                L’option <b class="text-blue-400 font-bold">Solutions d’Infrastructure, Systèmes et Réseaux</b> est orientée vers l'administration. Elle forme à la gestion des serveurs, à la configuration réseau et à la cybersécurité.
+                            </p>
+                            
+                            <ul class="text-sm mono text-blue-300/80 space-y-3 mt-auto font-bold">
+                                <li class="flex items-center gap-3"><span>▹</span> Admin Réseaux & Systèmes (Cisco)</li>
+                                <li class="flex items-center gap-3"><span>▹</span> Cybersécurité & Pare-feu</li>
+                                <li class="flex items-center gap-3"><span>▹</span> Virtualisation & Services Cloud</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="panel bg-black">
             <h2 class="text-3xl md:text-4xl 2xl:text-5xl font-black mb-8 md:mb-12 uppercase tracking-tight flex-shrink-0">Compétence</h2>
             
             <div class="bento-grid w-full h-full max-h-[70vh]">
                 
                 <div class="bento-item col-span-2 row-span-1 border-zinc-800 flex flex-col justify-center">
                     <h3 class="mono text-blue-500 text-[10px] 2xl:text-sm uppercase mb-2 md:mb-4 2xl:mb-6 tracking-widest">Profil</h3>
-                    <p class="text-sm md:text-xl 2xl:text-2xl text-zinc-300 leading-relaxed 2xl:leading-loose font-medium">Étudiant en 2ème année BTS SIO SLAM. Sérieux et passionné, je conçois des solutions logicielles performantes et adaptées aux besoins des entreprises.</p>
+                    <p class="text-sm md:text-xl 2xl:text-2xl text-zinc-300 leading-relaxed 2xl:leading-loose font-medium">Étudiant en 2ème année BTS SIO SLAM. Sérieux et passionné, je conçu des solutions logicielles performantes et adaptées aux besoins des entreprises.</p>
                 </div>
                 
                 <div onclick="window.location.href = 'Tableau_de_synthese_E5_SANTAKI_Yanis.pdf'" class="bento-item col-span-1 row-span-1 flex flex-col items-center justify-center text-center border-blue-500/20 cursor-pointer hover:border-blue-500 transition-all group relative" title="Voir le Tableau de synthèse E5">
@@ -84,7 +208,7 @@
                 
                 <div class="bento-item col-span-1 row-span-2 border-zinc-800 relative overflow-hidden flex flex-col justify-center">
                     <div class="relative z-10 h-full flex flex-col justify-center">
-                        <h3 class="text-2xl md:text-4xl 2xl:text-5xl font-black text-white mb-6 md:mb-8 2xl:mb-12 tracking-tight text-left">Langages</h3>
+                        <h3 class="text-2xl md:text-4xl 2xl:text-5xl font-black text-white mb-6 md:mb-8 2xl:mb-12 tracking-tight text-left">Stacks</h3>
                         <div class="flex flex-col gap-3 md:gap-4 2xl:gap-8">
                             
                             <div class="stack-row group/java">
@@ -122,9 +246,10 @@
                 
                 <div class="bento-item col-span-3 row-span-1 border-zinc-800 flex flex-col justify-start">
                     <h3 class="mono text-blue-500 text-[10px] 2xl:text-sm uppercase mb-4 md:mb-6 2xl:mb-8 tracking-widest">Méthodologies et Outils</h3>
+                    
                     <div class="flex flex-wrap gap-2 md:gap-4 2xl:gap-6">
                         <div class="tech-tag group 2xl:px-6 2xl:py-4">
-                            <img src="img//Unified Modelling Language (UML).svg" alt="UML" class="w-4 h-4 md:w-5 md:h-5 2xl:w-8 2xl:h-8">
+                            <img src="img/Unified Modelling Language (UML).svg" alt="UML" class="w-4 h-4 md:w-5 md:h-5 2xl:w-8 2xl:h-8">
                             <span class="text-[10px] md:text-sm 2xl:text-xl">UML / Merise</span>
                         </div>
                         <div class="tech-tag group 2xl:px-6 2xl:py-4">
@@ -132,15 +257,15 @@
                             <span class="text-[10px] md:text-sm 2xl:text-xl">Git / GitHub</span>
                         </div>
                         <div class="tech-tag group 2xl:px-6 2xl:py-4">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg" alt="Agile" class="w-4 h-4 md:w-5 md:h-5 2xl:w-8 2xl:h-8">
+                            <img src="img/jira-original.svg" alt="Agile" class="w-4 h-4 md:w-5 md:h-5 2xl:w-8 2xl:h-8">
                             <span class="text-[10px] md:text-sm 2xl:text-xl">Agile (Scrum)</span>
                         </div>
                         <div class="tech-tag group 2xl:px-6 2xl:py-4">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" alt="Docker" class="w-4 h-4 md:w-5 md:h-5 2xl:w-8 2xl:h-8">
+                            <img src="img/docker-original.svg" alt="Docker" class="w-4 h-4 md:w-5 md:h-5 2xl:w-8 2xl:h-8">
                             <span class="text-[10px] md:text-sm 2xl:text-xl">Docker</span>
                         </div>
                         <div class="tech-tag group 2xl:px-6 2xl:py-4">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" alt="Figma" class="w-4 h-4 md:w-5 md:h-5 2xl:w-8 2xl:h-8">
+                            <img src="img/figma-original.svg" alt="Figma" class="w-4 h-4 md:w-5 md:h-5 2xl:w-8 2xl:h-8">
                             <span class="text-[10px] md:text-sm 2xl:text-xl">Figma</span>
                         </div>
                         <div class="tech-tag group 2xl:px-6 2xl:py-4">
@@ -148,6 +273,7 @@
                             <span class="text-[10px] md:text-sm 2xl:text-xl">GLPI</span>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -199,13 +325,14 @@
             </div>
         </section>
 
-        <section id="veille" class="panel bg-zinc-950">
+        <section id="veille" class="panel bg-black">
             <h2 class="text-4xl 2xl:text-5xl font-black mb-12 2xl:mb-16 uppercase tracking-tight flex items-center gap-4 flex-shrink-0">
                 Veille Technologique 
                 <span class="w-12 2xl:w-16 h-1 2xl:h-2 bg-blue-600 rounded-full"></span>
             </h2>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-10 2xl:gap-16 w-full h-full pb-12">
+                
                 <article class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6 lg:p-8 2xl:p-12 flex flex-col justify-between hover:border-blue-500 transition-all group">
                     <div>
                         <div class="flex justify-between items-start mb-6 2xl:mb-10">
@@ -249,6 +376,7 @@
                         <div class="w-12 h-12 2xl:w-20 2xl:h-20 bg-purple-500/20 rounded-xl flex items-center justify-center mb-6 2xl:mb-10 text-purple-500 group-hover:bg-purple-500 group-hover:text-white transition-all">
                             <svg class="w-6 h-6 2xl:w-10 2xl:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M6 5c7.18 0 13 5.82 13 13M6 11a7 7 0 017 7m-6 0a1 1 0 11-2 0 1 1 0 012 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
                         </div>
+                        
                         <h3 class="veille-title text-xl 2xl:text-3xl font-bold mb-4 2xl:mb-8 text-white">Mes Sources</h3>
                         
                         <ul class="space-y-4 2xl:space-y-6 mt-6 2xl:mt-10">
@@ -280,6 +408,7 @@
                 </article>
             </div>
         </section>
+
     </main>
 
     <div id="contact-page" class="fixed inset-0 z-[100] bg-black/95 backdrop-blur-xl translate-y-full transition-transform duration-500 p-8 flex flex-col items-center justify-center overflow-y-auto">
