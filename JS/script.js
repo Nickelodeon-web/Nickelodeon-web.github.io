@@ -20,7 +20,7 @@ const projectsData = [
         desc: "Conception et développement d'un site e-commerce de A à Z sans framework. Gestion des sessions utilisateurs, panier dynamique, catalogue produits et back-office administrateur.",
         image: "img/photo-superMarche.avif", 
         githubLink: "https://github.com/Flaimeur/Supermarche", 
-        detailsLink: "details/"
+        detailsLink: "details/documentation-supermarcher.pdf"
     },
     {
         title: "Jeu de Tir sur Cible",
