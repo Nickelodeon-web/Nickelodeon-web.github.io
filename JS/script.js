@@ -31,7 +31,17 @@ const projectsData = [
         image: "img/photo-cible-game.avif", 
         githubLink: "https://github.com/Nickelodeon-web/Jeu-de-Tir-sur-Cible", 
         detailsLink: "details/documentation-jeux-cible.pdf" 
-    }
+    },
+    {
+        title: "GLPI",
+        badge: "Linux / PHP / MySQL",
+        listBadge: "Linux / GLPI",
+        shortDesc: "Gestion de parc informatique et Helpdesk (ITIL).",
+        desc: "Mise en œuvre d'une solution de gestion d'actifs (ITAM) et de support (Helpdesk). Configuration d'un serveur LAMP, gestion des inventaires automatisés et des tickets d'incidents.",
+        image: "img/photo-glpi.avif",
+         githubLink: "",// Laisse vide ou mets ton lien si tu en as un
+        detailsLink: "details/documentation-glpi.pdf"
+    },
 ];
 
 // --- DONNÉES EXPERIENCES ---
@@ -187,7 +197,18 @@ function updateProject(index) {
         document.getElementById('project-display-badge').innerText = project.badge;
         document.getElementById('project-display-desc').innerText = project.desc;
         document.getElementById('project-display-details').href = project.detailsLink; 
-        document.getElementById('project-display-github').href = project.githubLink; 
+        
+        // --- LOGIQUE POUR LE BOUTON GITHUB ---
+        const githubBtn = document.getElementById('project-display-github');
+        
+        if (project.githubLink && project.githubLink !== "") {
+            githubBtn.href = project.githubLink;
+            githubBtn.style.display = "flex"; // On l'affiche (ou "block" selon ton CSS)
+        } else {
+            githubBtn.style.display = "none"; // On le cache totalement
+        }
+        // --------------------------------------
+
         gsap.to(displayArea, { opacity: 1, y: 0, duration: 0.4 });
     }});
 }
