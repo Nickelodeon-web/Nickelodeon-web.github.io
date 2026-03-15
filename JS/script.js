@@ -289,5 +289,5 @@ function openContact() { document.getElementById("contact-page").classList.remov
 function closeContact() { document.getElementById("contact-page").classList.add("translate-y-full"); }
 
 function openCV() { 
-    window.location.href = 'CV.pdf'; 
+    window.location.href = 'CV-portfolio.pdf';
 }
